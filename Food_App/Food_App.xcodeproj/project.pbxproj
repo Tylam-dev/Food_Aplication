@@ -9,23 +9,41 @@
 /* Begin PBXBuildFile section */
 		FFA8EF022B0664A600871AC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF012B0664A600871AC8 /* AppDelegate.swift */; };
 		FFA8EF042B0664A600871AC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF032B0664A600871AC8 /* SceneDelegate.swift */; };
-		FFA8EF062B0664A600871AC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF052B0664A600871AC8 /* ViewController.swift */; };
+		FFA8EF062B0664A600871AC8 /* FoodRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF052B0664A600871AC8 /* FoodRecipesViewController.swift */; };
 		FFA8EF092B0664A600871AC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA8EF072B0664A600871AC8 /* Main.storyboard */; };
 		FFA8EF0B2B0664A700871AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFA8EF0A2B0664A700871AC8 /* Assets.xcassets */; };
 		FFA8EF0E2B0664A700871AC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFA8EF0C2B0664A700871AC8 /* LaunchScreen.storyboard */; };
 		FFA8EF192B07C07000871AC8 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF182B07C07000871AC8 /* RecipeController.swift */; };
+		FFA8EF1B2B07D1BA00871AC8 /* Dish_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF1A2B07D1BA00871AC8 /* Dish_Data.swift */; };
+		FFA8EF1D2B07D1D600871AC8 /* Dish_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF1C2B07D1D600871AC8 /* Dish_Model.swift */; };
+		FFA8EF1F2B07D24C00871AC8 /* Dish_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF1E2B07D24C00871AC8 /* Dish_Manager.swift */; };
+		FFA8EF212B07D2C100871AC8 /* Category_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF202B07D2C100871AC8 /* Category_Data.swift */; };
+		FFA8EF232B07D2D000871AC8 /* Category_Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF222B07D2D000871AC8 /* Category_Manager.swift */; };
+		FFA8EF252B07D2DA00871AC8 /* Category_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF242B07D2DA00871AC8 /* Category_Model.swift */; };
+		FFA8EF272B0832FE00871AC8 /* Dish_Image_Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF262B0832FE00871AC8 /* Dish_Image_Data.swift */; };
+		FFA8EF292B08331200871AC8 /* Dish_Image_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF282B08331200871AC8 /* Dish_Image_Model.swift */; };
+		FFA8EF2B2B08332600871AC8 /* Dish_Image_Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8EF2A2B08332600871AC8 /* Dish_Image_Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFA8EEFE2B0664A600871AC8 /* Food_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Food_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA8EF012B0664A600871AC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFA8EF032B0664A600871AC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FFA8EF052B0664A600871AC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFA8EF052B0664A600871AC8 /* FoodRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRecipesViewController.swift; sourceTree = "<group>"; };
 		FFA8EF082B0664A600871AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFA8EF0A2B0664A700871AC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFA8EF0D2B0664A700871AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFA8EF0F2B0664A700871AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA8EF182B07C07000871AC8 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
+		FFA8EF1A2B07D1BA00871AC8 /* Dish_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish_Data.swift; sourceTree = "<group>"; };
+		FFA8EF1C2B07D1D600871AC8 /* Dish_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish_Model.swift; sourceTree = "<group>"; };
+		FFA8EF1E2B07D24C00871AC8 /* Dish_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish_Manager.swift; sourceTree = "<group>"; };
+		FFA8EF202B07D2C100871AC8 /* Category_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category_Data.swift; sourceTree = "<group>"; };
+		FFA8EF222B07D2D000871AC8 /* Category_Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category_Manager.swift; sourceTree = "<group>"; };
+		FFA8EF242B07D2DA00871AC8 /* Category_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category_Model.swift; sourceTree = "<group>"; };
+		FFA8EF262B0832FE00871AC8 /* Dish_Image_Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish_Image_Data.swift; sourceTree = "<group>"; };
+		FFA8EF282B08331200871AC8 /* Dish_Image_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish_Image_Model.swift; sourceTree = "<group>"; };
+		FFA8EF2A2B08332600871AC8 /* Dish_Image_Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish_Image_Controller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,15 @@
 		FFA8EF152B0664CE00871AC8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FFA8EF1A2B07D1BA00871AC8 /* Dish_Data.swift */,
+				FFA8EF1C2B07D1D600871AC8 /* Dish_Model.swift */,
+				FFA8EF1E2B07D24C00871AC8 /* Dish_Manager.swift */,
+				FFA8EF202B07D2C100871AC8 /* Category_Data.swift */,
+				FFA8EF222B07D2D000871AC8 /* Category_Manager.swift */,
+				FFA8EF242B07D2DA00871AC8 /* Category_Model.swift */,
+				FFA8EF262B0832FE00871AC8 /* Dish_Image_Data.swift */,
+				FFA8EF282B08331200871AC8 /* Dish_Image_Model.swift */,
+				FFA8EF2A2B08332600871AC8 /* Dish_Image_Controller.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -88,7 +115,7 @@
 		FFA8EF172B0664E400871AC8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FFA8EF052B0664A600871AC8 /* ViewController.swift */,
+				FFA8EF052B0664A600871AC8 /* FoodRecipesViewController.swift */,
 				FFA8EF182B07C07000871AC8 /* RecipeController.swift */,
 			);
 			path = Controller;
@@ -165,10 +192,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA8EF062B0664A600871AC8 /* ViewController.swift in Sources */,
+				FFA8EF232B07D2D000871AC8 /* Category_Manager.swift in Sources */,
+				FFA8EF062B0664A600871AC8 /* FoodRecipesViewController.swift in Sources */,
+				FFA8EF272B0832FE00871AC8 /* Dish_Image_Data.swift in Sources */,
 				FFA8EF192B07C07000871AC8 /* RecipeController.swift in Sources */,
+				FFA8EF252B07D2DA00871AC8 /* Category_Model.swift in Sources */,
 				FFA8EF022B0664A600871AC8 /* AppDelegate.swift in Sources */,
+				FFA8EF1F2B07D24C00871AC8 /* Dish_Manager.swift in Sources */,
+				FFA8EF1D2B07D1D600871AC8 /* Dish_Model.swift in Sources */,
+				FFA8EF212B07D2C100871AC8 /* Category_Data.swift in Sources */,
+				FFA8EF1B2B07D1BA00871AC8 /* Dish_Data.swift in Sources */,
 				FFA8EF042B0664A600871AC8 /* SceneDelegate.swift in Sources */,
+				FFA8EF292B08331200871AC8 /* Dish_Image_Model.swift in Sources */,
+				FFA8EF2B2B08332600871AC8 /* Dish_Image_Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

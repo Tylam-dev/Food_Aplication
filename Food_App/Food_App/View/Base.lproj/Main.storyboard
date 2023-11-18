@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Food Recipes View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Food_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FoodRecipesViewController" customModule="Food_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -670,6 +670,19 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outletCollection property="CategoriesCollection" destination="arf-LC-GKh" collectionClass="NSMutableArray" id="sC0-FY-rHZ"/>
+                        <outletCollection property="CategoriesCollection" destination="Y81-1R-c0t" collectionClass="NSMutableArray" id="hPI-a0-MXe"/>
+                        <outletCollection property="CategoriesCollection" destination="L6f-SO-C7o" collectionClass="NSMutableArray" id="CoO-Eg-aER"/>
+                        <outletCollection property="CategoriesCollection" destination="8Ba-1t-hT3" collectionClass="NSMutableArray" id="eUe-vI-YFW"/>
+                        <outletCollection property="CategoriesCollection" destination="C2d-Xp-YZJ" collectionClass="NSMutableArray" id="sBs-Yx-Rnr"/>
+                        <outletCollection property="Img_Cat1_collection" destination="Hy3-gj-6w9" collectionClass="NSMutableArray" id="pzm-Yz-tEE"/>
+                        <outletCollection property="Img_Cat1_collection" destination="cDk-Ww-Vru" collectionClass="NSMutableArray" id="glV-QL-epk"/>
+                        <outletCollection property="Img_Cat1_collection" destination="uU3-vU-4fR" collectionClass="NSMutableArray" id="4og-7x-Z7g"/>
+                        <outletCollection property="Img_Cat1_collection" destination="bQz-9v-lYh" collectionClass="NSMutableArray" id="czs-ZD-KQF"/>
+                        <outletCollection property="DishesCat1Collection" destination="cTm-Tx-S40" collectionClass="NSMutableArray" id="vvz-Fa-bWW"/>
+                        <outletCollection property="DishesCat1Collection" destination="MyM-Pg-mdl" collectionClass="NSMutableArray" id="bOY-e2-gfy"/>
+                        <outletCollection property="DishesCat1Collection" destination="Dy6-X5-OBb" collectionClass="NSMutableArray" id="Pku-Lp-hPY"/>
+                        <outletCollection property="DishesCat1Collection" destination="XKh-Y3-GmF" collectionClass="NSMutableArray" id="E4x-7O-gAn"/>
                         <segue destination="wzN-k6-9It" kind="presentation" identifier="" id="ogu-5L-baa"/>
                     </connections>
                 </viewController>
@@ -733,9 +746,9 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="by6-tg-Gjc">
-                                <rect key="frame" x="13" y="38" width="90" height="38"/>
+                                <rect key="frame" x="19" y="38" width="73" height="38"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="&lt; Atras">
+                                <buttonConfiguration key="configuration" style="plain" title="Atras">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -744,11 +757,11 @@
                         <viewLayoutGuide key="safeArea" id="80g-tX-8kf"/>
                         <color key="backgroundColor" red="0.89000000000000001" green="0.85129661720000005" blue="0.70490821540000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="by6-tg-Gjc" firstAttribute="top" secondItem="80g-tX-8kf" secondAttribute="top" constant="38" id="4RN-lJ-4fp"/>
+                            <constraint firstItem="Dkt-o5-8ut" firstAttribute="top" secondItem="by6-tg-Gjc" secondAttribute="bottom" constant="4" id="4vY-Qe-Aqw"/>
                             <constraint firstItem="Dkt-o5-8ut" firstAttribute="top" secondItem="80g-tX-8kf" secondAttribute="top" constant="80" id="61Q-CD-AUu"/>
-                            <constraint firstItem="by6-tg-Gjc" firstAttribute="leading" secondItem="80g-tX-8kf" secondAttribute="leading" constant="13" id="6TZ-8c-uei"/>
-                            <constraint firstItem="80g-tX-8kf" firstAttribute="trailing" secondItem="by6-tg-Gjc" secondAttribute="trailing" constant="290" id="TjM-7R-HaY"/>
-                            <constraint firstItem="Dkt-o5-8ut" firstAttribute="top" secondItem="by6-tg-Gjc" secondAttribute="bottom" constant="4" id="mN0-E1-7Sn"/>
+                            <constraint firstItem="by6-tg-Gjc" firstAttribute="top" secondItem="80g-tX-8kf" secondAttribute="top" constant="38" id="CpT-NK-Wrb"/>
+                            <constraint firstItem="80g-tX-8kf" firstAttribute="trailing" secondItem="by6-tg-Gjc" secondAttribute="trailing" constant="301" id="L4u-i9-kQg"/>
+                            <constraint firstItem="by6-tg-Gjc" firstAttribute="leading" secondItem="80g-tX-8kf" secondAttribute="leading" constant="19" id="h8C-Ex-hNY"/>
                             <constraint firstItem="80g-tX-8kf" firstAttribute="trailing" secondItem="Dkt-o5-8ut" secondAttribute="trailing" id="nDg-ik-c89"/>
                             <constraint firstItem="80g-tX-8kf" firstAttribute="bottom" secondItem="Dkt-o5-8ut" secondAttribute="bottom" constant="20" id="t6W-uZ-6My"/>
                             <constraint firstItem="Dkt-o5-8ut" firstAttribute="leading" secondItem="80g-tX-8kf" secondAttribute="leading" id="wAn-Bd-S0V"/>
