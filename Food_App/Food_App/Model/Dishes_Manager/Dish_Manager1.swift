@@ -8,8 +8,8 @@
 import Foundation
 
 protocol DishManagerDelegate1{
-    func didUpdateDish(dish: [Dish_Model])
-    func didFailWithError(error: Error)
+    func didUpdateDish1(dish: [Dish_Model])
+    func didFailWithError1(error: Error)
 }
 
 struct Dish_Manager1 {
@@ -24,11 +24,11 @@ struct Dish_Manager1 {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { data, respons, error in
                 if error != nil{
-                    self.delegate?.didFailWithError(error: error!)
+                    self.delegate?.didFailWithError1(error: error!)
                 }
                 if let safeData = data {
                     if let dish = self.parseJSON(DishData: safeData){
-                        self.delegate?.didUpdateDish(dish: dish)
+                        self.delegate?.didUpdateDish1(dish: dish)
                     }
                 }
             }
