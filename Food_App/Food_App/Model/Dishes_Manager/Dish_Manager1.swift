@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol DishManagerDelegate{
+protocol DishManagerDelegate1{
     func didUpdateDish(dish: [Dish_Model])
     func didFailWithError(error: Error)
 }
 
-struct Dish_Manager {
+struct Dish_Manager1 {
     let url: String = "https://www.themealdb.com/api/json/v1/1/filter.php?c="
-    var delegate: DishManagerDelegate?
+    var delegate: DishManagerDelegate1?
     
     func fetchImageCategory(category: String){
         performRequest(with: url + category)
