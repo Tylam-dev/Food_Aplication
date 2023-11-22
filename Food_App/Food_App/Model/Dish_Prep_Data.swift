@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+// MARK: - CategoryData
+struct Dish_Prep_Data: Codable {
+    let meals: [[String: String?]]?
+}

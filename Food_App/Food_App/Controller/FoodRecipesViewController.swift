@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 
 class FoodRecipesViewController: UIViewController {
-
+    
     @IBOutlet var CategoriesCollection: [UILabel]!
     
     @IBOutlet var Img_Cat1_collection: [UIImageView]!
@@ -39,7 +39,9 @@ class FoodRecipesViewController: UIViewController {
     lazy var dishManager3 = Dish_Manager3()
     lazy var dishManager4 = Dish_Manager4()
     lazy var dishManager5 = Dish_Manager5()
+    lazy var dishPrepManager = Dish_Prep_Manager()
     var catArray: [String] = []
+    var tag = "2"
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryManager.delegate = self
@@ -49,8 +51,23 @@ class FoodRecipesViewController: UIViewController {
         dishManager4.delegate = self
         dishManager5.delegate = self
         categoryManager.fetchFoodApi()
+        
         // Do any additional setup after loading the view.
+    }
+    @objc func imageTapped(_ gesture: UITapGestureRecognizer) {
+        if let tappedImageView = gesture.view as? UIImageView {
+            // Obtén la etiqueta para identificar la imagen seleccionada
+            tag = String(tappedImageView.tag)
+            print(tag)
         }
+        self.performSegue(withIdentifier: "GoToPrep", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToPrep"{
+            let destination = segue.destination as! RecipeController
+            destination.tag1 = tag
+        }
+    }
 }
 
 
@@ -86,6 +103,10 @@ extension FoodRecipesViewController: DishManagerDelegate1{
                 let url = URL(string: dish[i].imgUrl)
                 Img_Cat1_collection[i].kf.setImage(with: url)
                 DishesCat1Collection[i].text = dish[i].name
+                Img_Cat1_collection[i].tag = Int(dish[i].id)!
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+                Img_Cat1_collection[i].addGestureRecognizer(tapGesture)
+                Img_Cat1_collection[i].isUserInteractionEnabled = true
             }
         }
     }
@@ -102,6 +123,10 @@ extension FoodRecipesViewController: DishManagerDelegate2{
                 let url = URL(string: dish[i].imgUrl)
                 Img_Cat2_collection[i].kf.setImage(with: url)
                 DishesCat2Collection[i].text = dish[i].name
+                Img_Cat2_collection[i].tag = Int(dish[i].id)!
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+                Img_Cat2_collection[i].addGestureRecognizer(tapGesture)
+                Img_Cat2_collection[i].isUserInteractionEnabled = true
             }
         }
     }
@@ -113,12 +138,15 @@ extension FoodRecipesViewController: DishManagerDelegate3{
     }
     
     func didUpdateDish3(dish: [Dish_Model]) {
-        print(dish)
         for i in 0...3{
             DispatchQueue.main.async { [self] in
                 let url = URL(string: dish[i].imgUrl)
                 Img_Cat3_collection[i].kf.setImage(with: url)
                 DishesCat3Collection[i].text = dish[i].name
+                Img_Cat3_collection[i].tag = Int(dish[i].id)!
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+                Img_Cat3_collection[i].addGestureRecognizer(tapGesture)
+                Img_Cat3_collection[i].isUserInteractionEnabled = true
             }
         }
     }
@@ -136,6 +164,10 @@ extension FoodRecipesViewController: DishManagerDelegate4{
                 let url = URL(string: dish[i].imgUrl)
                 Img_Cat4_collection[i].kf.setImage(with: url)
                 DishesCat4Collection[i].text = dish[i].name
+                Img_Cat4_collection[i].tag = Int(dish[i].id)!
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+                Img_Cat4_collection[i].addGestureRecognizer(tapGesture)
+                Img_Cat4_collection[i].isUserInteractionEnabled = true
             }
         }
     }
@@ -152,6 +184,10 @@ extension FoodRecipesViewController: DishManagerDelegate5{
                 let url = URL(string: dish[i].imgUrl)
                 Img_Cat5_collection[i].kf.setImage(with: url)
                 DishesCat5Collection[i].text = dish[i].name
+                Img_Cat5_collection[i].tag = Int(dish[i].id)!
+                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_:)))
+                Img_Cat5_collection[i].addGestureRecognizer(tapGesture)
+                Img_Cat5_collection[i].isUserInteractionEnabled = true
             }
         }
     }
