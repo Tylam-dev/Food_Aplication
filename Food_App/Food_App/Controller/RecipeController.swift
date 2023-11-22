@@ -12,8 +12,10 @@ class RecipeController: UIViewController {
 
     @IBOutlet weak var videoRepro: WKWebView!
     
-    @IBOutlet weak var ingredientsList: UITextField!
-    @IBOutlet weak var preparationText: UITextField!
+    @IBOutlet weak var inrgedienteList: UITextView!
+    
+    @IBOutlet weak var descriptionText: UITextView!
+    
     lazy var dishPrepManager = Dish_Prep_Manager()
     var tag1 = ""
     var videoUrl: String = ""
@@ -25,11 +27,32 @@ class RecipeController: UIViewController {
         super.viewDidLoad()
         dishPrepManager.delegate = self
         dishPrepManager.fetchPreparation(id: tag1)
+        inrgedienteList.isEditable = false
+        inrgedienteList.isScrollEnabled = true
+        descriptionText.isEditable = false
+        descriptionText.isScrollEnabled = true
         // Do any additional setup after loading the view.
     }
     
     @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func ordenar(_ array: [String]) -> [String]{
+        var arrayToWork = array
+        let datosOrdenados = arrayToWork.sorted {
+            guard let numero1 = Int($0.components(separatedBy: "-")[0]),
+                  let numero2 = Int($1.components(separatedBy: "-")[0]) else {
+                return false
+            }
+            return numero1 < numero2
+        }
         
+        let resultado = datosOrdenados.map {
+            $0.components(separatedBy: "-").dropFirst().joined(separator: "-")
+        }
+        
+        return resultado
     }
     /*
     // MARK: - Navigation
@@ -58,6 +81,10 @@ extension RecipeController: DishPrepDelegate{
             let urlVideo = URL(string:videoUrl)
             let myRequest = URLRequest(url: urlVideo!)
             videoRepro.load(myRequest)
+            for i in 0..<ingredients.count{
+                inrgedienteList.text += "\(ordenar(measures)[i]) \(ordenar(ingredients)[i]) \n"
+            }
+            descriptionText.text = instructions
         }
     }
 }

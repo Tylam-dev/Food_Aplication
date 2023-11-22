@@ -46,13 +46,15 @@ struct Dish_Prep_Manager {
             var ingridientsArray: [String] = []
             var measuresArray: [String] = []
             let name = (decodeData.meals?[0]["strMeal"] ?? "") ?? ""
+            
             if let ingredients = decodeData.meals?[0]{
                 for ing in ingredients.keys{
                     if ing.hasPrefix("strIngredient"){
+                        let ingPositionString = ing.split(separator: "strIngredient")
                     if let ingredient = ingredients[ing]{
                             if let ingre = ingredient {
                                 if ingre != ""{
-                                    ingridientsArray.append(ingre)
+                                    ingridientsArray.append("\(ingPositionString[0])-\(ingre)")
                                 }
                             }
                         }
@@ -62,10 +64,11 @@ struct Dish_Prep_Manager {
             if let measures = decodeData.meals?[0]{
                 for mes in measures.keys{
                     if mes.hasPrefix("strMeasure"){
+                        let mesPositionString = mes.split(separator: "strMeasure")
                     if let measure = measures[mes]{
                             if let meas = measure {
                                 if meas != "" && meas != " "{
-                                    measuresArray.append(meas)
+                                    measuresArray.append("\(mesPositionString[0])-\(meas)")
                                 }
                             }
                         }
